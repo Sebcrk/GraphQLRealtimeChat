@@ -1,0 +1,61 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.navbar h3 {
+  font-family: "Inter";
+}
+
+.home {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left h1 {
+  font-family: "Inter";
+  font-size: 70px;
+  font-weight: 600;
+}
+
+.left p {
+  color: rgba(128, 128, 128, 0.9);
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 20px;
+}
+
+.inputContainer {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgb(179, 179, 179);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.inputContainer input {
+  width: 450px;
+  outline: none;
+  padding: 20px 0;
+  padding-left: 10px;
+  border: none;
+  font-size: 16px;
+
+}
+.inputContainer > button {
+  background-color: transparent;
+  border: none;
+  padding: 0 5px;
+  padding-top: 2px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.right img {
+    width: 500px;
+    object-fit: contain;
+}
