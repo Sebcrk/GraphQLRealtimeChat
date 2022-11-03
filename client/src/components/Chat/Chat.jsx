@@ -32,7 +32,7 @@ function Chat({username, userId}) {
         <button>Hidden Button</button>
       </div>
       <div className={styles.chatContainer}>
-        <Messages />
+        <Messages userId={userId} username={username}  />
         <div className={styles.chatInput}>
           <input
             type="text"
