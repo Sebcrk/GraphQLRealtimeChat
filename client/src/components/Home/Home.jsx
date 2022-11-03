@@ -3,9 +3,7 @@ import styles from "./Home.module.css";
 import chatImg from "../../assets/chat1.jpg";
 import groupChatImg from "../../assets/group_chat.svg";
 
-function Home({ setStartChat, userId }) {
-  const [username, setUsername] = useState("");
-  console.log(username);
+function Home({ setStartChat, userId, username, setUsername }) {
 
   const handleStartChat = () => {
     if (!username) {

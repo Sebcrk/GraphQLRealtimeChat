@@ -7,16 +7,16 @@ export const pubsub = new PubSub();
 
 const resolvers = {
   Query: {
-    messages: () => messages,
+    getAllMessages: () => messages,
   },
   Mutation: {
     sendMessage: (parent, args) => {
-      const { userId, user, content } = args;
+      const { userId, username, content } = args;
       const id = messages.length;
       const newMessage = {
         userId,
         id,
-        user,
+        username,
         content,
       };
 

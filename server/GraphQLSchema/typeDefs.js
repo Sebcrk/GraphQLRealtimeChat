@@ -2,16 +2,16 @@
 type Message {
     id: ID!
     userId: String!
-    user: String!
+    username: String!
     content: String!
 }
 
 type Query {
-    messages: [Message!]
+    getAllMessages: [Message!]
 }
 
 type Mutation {
-    sendMessage (userId: String!, user: String!, content: String!): ID
+    sendMessage (userId: String!, username: String!, content: String!): ID
 }
 
 type Subscription {
