@@ -21,7 +21,7 @@ const resolvers = {
       };
 
       messages.push(newMessage);
-      subscribers.forEach((subscriber) => subscriber);
+      subscribers.forEach((fn) => fn());
       return id;
     },
   },
@@ -29,7 +29,7 @@ const resolvers = {
     messages: {
       subscribe: async (parent, args, context) => {
         const channel = Math.random().toString(36).slice(2, 15);
-        subscribers.push(pubsub.publish(channel, { messages }));
+        subscribers.push(() => pubsub.publish(channel, { messages }));
 
         setTimeout(() => {
           pubsub.publish(channel, { messages });

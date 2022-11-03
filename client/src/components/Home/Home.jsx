@@ -25,7 +25,7 @@ function Home({ setStartChat, userId, username, setUsername }) {
         <div className={styles.left}>
           <h1>Chat with your community</h1>
           <p>
-            A chat application using GraphQL subscriptions and Web Sockets in
+            A chat application using GraphQL Subscriptions and Web Sockets to communicate in
             realtime. One click away from connecting with your community.
           </p>
           <div className={styles.inputContainer}>

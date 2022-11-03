@@ -10,7 +10,7 @@ export const useMessages = () => {
 
 export const useSendMessage = () => {
   const [sendMessage, { error }] = useMutation(SEND_MESSAGE, {
-    // refetchQueries: [{ query: ALL_MESSAGES }],
+    refetchQueries: [{ query: ALL_MESSAGES }],
     onError: (error) => error.graphQLErrors[0].message,
   });
   return { sendMessage, error };

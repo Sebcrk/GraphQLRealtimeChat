@@ -3,6 +3,8 @@ import { useGetRealtimeMessages } from "../../messages/custom-hooks";
 
 function Messages() {
   const { data, loading } = useGetRealtimeMessages();
+
+  
   console.log(loading, data);
 
   if (loading) return <h3>Loading messages...</h3>;
