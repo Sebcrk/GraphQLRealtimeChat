@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "./Chat.module.css";
 import { useSendMessage } from "../../messages/custom-hooks";
 import Messages from "../Messages/Messages.jsx"
+import sentImg from "../../assets/sent.png";
 
 function Chat({username, userId}) {
   const [state, setState] = useState({
@@ -29,9 +30,9 @@ function Chat({username, userId}) {
           <h1>Chat App</h1>
           <p>The temporary chat to connect with your community</p>
         </div>
-        <button>Hidden Button</button>
+        <button className={styles.hidden}>Hidden Button</button>
       </div>
-      <div className={styles.chatContainer}>
+      <div >
         <Messages userId={userId} username={username}  />
         <div className={styles.chatInput}>
           <input
@@ -43,14 +44,14 @@ function Chat({username, userId}) {
               }))
             }
             value={state.content}
-            onKeyDown={(event) => {
+            onKeyUp={(event) => {
               if (event.key === "Enter") {
                 event.preventDefault();
                 sendMessageHandler();
               }
             }}
           />
-          <button onClick={sendMessageHandler}>Send</button>
+         <img onClick={sendMessageHandler} src={sentImg} alt="Send message button"/>
         </div>
       </div>
     </div>

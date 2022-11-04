@@ -41,3 +41,10 @@
  font-size: 18px;
  outline: none;
 }
+
+.chatInput img{
+    width: 50px;
+    cursor: pointer;
+    padding-right: 5px;
+    background: transparent;
+   }

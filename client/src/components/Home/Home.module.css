@@ -46,16 +46,21 @@
   font-size: 16px;
 
 }
+
 .inputContainer > button {
   background-color: transparent;
   border: none;
-  padding: 0 5px;
+  padding: 0 10px;
   padding-top: 2px;
   cursor: pointer;
   font-size: 16px;
 }
 
+.inputContainer > button > img{
+  width: 40px;
+}
+
 .right img {
-    width: 500px;
+    width: 450px;
     object-fit: contain;
 }

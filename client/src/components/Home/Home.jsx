@@ -1,7 +1,6 @@
-import { useState } from "react";
 import styles from "./Home.module.css";
-import chatImg from "../../assets/chat1.jpg";
-import groupChatImg from "../../assets/group_chat.svg";
+import chatImg from "../../assets/chat.jpg";
+import joinImg from "../../assets/enter.png";
 
 function Home({ setStartChat, userId, username, setUsername }) {
 
@@ -30,16 +29,25 @@ function Home({ setStartChat, userId, username, setUsername }) {
           </p>
           <div className={styles.inputContainer}>
             <input
+            autoFocus
               type="text"
               value={username}
               placeholder="Enter your username"
               onChange={({ target }) => setUsername(target.value)}
+              onKeyUp={(event) => {
+                if (event.key === "Enter") {
+                  event.preventDefault();
+                  handleStartChat()
+                }
+              }}
             />
-            <button onClick={handleStartChat}>Join</button>
+            <button onClick={handleStartChat}>
+              <img src={joinImg} alt="Join chat button" />
+            </button>
           </div>
         </div>
         <div className={styles.right}>
-          <img alt="Chat image" src={chatImg} />
+          <img alt="Chat logo" src={chatImg} />
         </div>
       </div>
     </div>

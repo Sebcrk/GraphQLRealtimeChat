@@ -2,6 +2,7 @@ import React from "react";
 import { useGetRealtimeMessages } from "../../messages/custom-hooks";
 import styles from "./Messages.module.css";
 
+
 function Messages(props) {
   const { data, loading } = useGetRealtimeMessages();
 
@@ -13,6 +14,7 @@ function Messages(props) {
         const isCurrentUser = message.userId === props.userId;
         return (
           <div
+          className={styles.content}
             key={message.id}
             style={{
               display: "flex",
@@ -31,8 +33,8 @@ function Messages(props) {
               </h5>
               <p
                 style={{
-                  background: isCurrentUser ? "blue" : "#e5e6ea",
-                  color: isCurrentUser ? "white" : "black",
+                  background: isCurrentUser ? "#2C454F" : "#6FE1C0",
+                  color: isCurrentUser ? "#74EAD5" : "white"
                 }}
                 className={styles.message}
               >
