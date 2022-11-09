@@ -13,6 +13,7 @@ function Home({ setStartChat, userId, username, setUsername }) {
 
     sessionStorage.setItem("user",JSON.stringify(data))
     setStartChat(true)
+    setUsername("")
   }
 
   return (
@@ -22,7 +23,7 @@ function Home({ setStartChat, userId, username, setUsername }) {
       </nav> */}
       <div className={styles.home}>
         <div className={styles.left}>
-          <h1>Chat with your community</h1>
+          <h1 className={styles.title}>Chat with your community</h1>
           <p>
             A chat application using GraphQL Subscriptions and Web Sockets to communicate in
             realtime. One click away from connecting with your community.

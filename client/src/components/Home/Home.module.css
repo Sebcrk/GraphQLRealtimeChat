@@ -28,6 +28,13 @@
   padding-top: 20px;
 }
 
+.title {
+  will-change: filter
+}
+.title:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
 .inputContainer {
   margin-top: 20px;
   display: inline-flex;

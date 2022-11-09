@@ -11,7 +11,7 @@ function App() {
   const [startChat, setStartChat] = useState(false)
 
 
-  if (startChat) return <Chat username={username} userId={userId}/>
+  if (startChat) return <Chat setStartChat={setStartChat} username={username} userId={userId}/>
 
   return <Home setStartChat={setStartChat} userId={userId} username={username} setUsername={setUsername}/>
 }
