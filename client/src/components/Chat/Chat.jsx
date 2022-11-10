@@ -42,9 +42,7 @@ function Chat({ username, userId, setStartChat }) {
         <button className={styles.hidden}>Hidden Button</button>
       </div>
       <div className={styles.container}>
-        <div>
           <Messages userId={userId} username={username} />
-        </div>        
       </div>
       <div className={styles.chatInput}>
             <input
