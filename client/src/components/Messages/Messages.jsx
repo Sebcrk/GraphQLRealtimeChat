@@ -1,10 +1,19 @@
-import React from "react";
+import { useRef, useEffect } from "react";
 import { useGetRealtimeMessages } from "../../messages/custom-hooks";
 import styles from "./Messages.module.css";
 
 
 function Messages(props) {
   const { data, loading } = useGetRealtimeMessages();
+
+  const bottomRef = useRef()
+
+  const scrollToBottom = () => {
+    bottomRef.current?.scrollIntoView({behavior: "auto"})
+  }
+  useEffect(() => {
+    scrollToBottom()
+  }, [data])
 
   if (loading) return <h3>Loading messages...</h3>;
 
@@ -44,6 +53,7 @@ function Messages(props) {
           </div>
         );
       })}
+      <div ref={bottomRef}/>
     </>
   );
 }

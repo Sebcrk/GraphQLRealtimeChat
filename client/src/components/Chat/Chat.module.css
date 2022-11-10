@@ -1,13 +1,14 @@
 .container {
   max-width: 1200px;
+  max-height: 425px;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 20px;  
+  overflow-y: scroll;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
 }
 
 .nav img {
@@ -30,12 +31,13 @@
 }
 
 .chatInput {
+  z-index: 10;
   margin: auto;
   width: 880px;
   justify-content: center;
   display: flex;
   box-shadow: 4px -1px 25px -3px rgba(153, 153, 153, 1);
-  padding: 10px 0;
+  padding: 10px 10px;
 }
 
 .chatInput input {

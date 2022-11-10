@@ -13,7 +13,6 @@ function Home({ setStartChat, userId, username, setUsername }) {
 
     sessionStorage.setItem("user",JSON.stringify(data))
     setStartChat(true)
-    setUsername("")
   }
 
   return (
