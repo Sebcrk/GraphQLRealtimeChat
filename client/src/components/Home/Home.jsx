@@ -17,9 +17,6 @@ function Home({ setStartChat, userId, username, setUsername }) {
 
   return (
     <div className={styles.container}>
-      {/* <nav className={styles.navbar}>
-        <h3>Chat</h3>
-      </nav> */}
       <div className={styles.home}>
         <div className={styles.left}>
           <h1 className={styles.title}>Chat with your community</h1>
