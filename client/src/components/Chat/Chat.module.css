@@ -40,6 +40,7 @@
 .chatInput {
   z-index: 10;
   margin: auto;
+  margin-top: 20px;
   width: 880px;
   justify-content: center;
   display: flex;
