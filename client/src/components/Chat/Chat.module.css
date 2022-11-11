@@ -1,9 +1,16 @@
+
 .container {
   max-width: 1200px;
-  max-height: 425px;
+  height: 425px;  
   margin: auto;
-  margin-top: 20px;  
-  overflow-y: scroll;
+  margin-top: 10px;  
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
 }
 
 .nav {
@@ -21,7 +28,7 @@
   border: none;
   font-size: 18px;
 }
-
+ 
 .title {
   text-align: center;
 }

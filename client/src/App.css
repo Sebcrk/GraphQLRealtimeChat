@@ -39,3 +39,24 @@
 .read-the-docs {
   color: #888;
 }
+
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #74EAD5 #546e7a;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #546e7a;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #74EAD5;
+  border-radius: 20px;
+  border: 3px solid #546e7a;
+}
