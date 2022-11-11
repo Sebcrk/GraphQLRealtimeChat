@@ -1,6 +1,7 @@
 
 .container {
   max-width: 1200px;
+  min-width: 350px;
   height: 425px;  
   margin: auto;
   margin-top: 10px;  
@@ -40,8 +41,8 @@
 .chatInput {
   z-index: 10;
   margin: auto;
-  margin-top: 20px;
-  width: 880px;
+  margin-top: 10px;
+  width: 100%;
   justify-content: center;
   display: flex;
   box-shadow: 4px -1px 25px -3px rgba(153, 153, 153, 1);
@@ -50,7 +51,7 @@
 
 .chatInput input {
   border: none;
-  flex: 1;
+  flex: auto;
   padding-left: 10px;
   font-size: 18px;
   outline: none;
@@ -62,3 +63,10 @@
   padding-right: 5px;
   background: transparent;
 }
+
+
+/* @media screen and (max-width: 510px) {
+  .chatInput {
+    flex-direction: column;
+  }
+} */
