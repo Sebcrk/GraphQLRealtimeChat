@@ -47,6 +47,7 @@ function Chat({ username, userId, setStartChat }) {
       <div className={styles.chatInput}>
             <input
               type="text"
+              autoFocus
               onChange={({ target }) =>
                 setState((prevState) => ({
                   ...prevState,
